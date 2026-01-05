@@ -1,0 +1,37 @@
+{
+  "homepage": {
+    "title": "Start Your Novel Continuation",
+    "inputPlaceholder": "Paste your novel content to continue writing...",
+    "suggestions": {
+      "fantasy": "As night fell, Li Ming walked home alone. Suddenly, he discovered an ancient wooden door by the roadside that he had never seen before, carved with strange runes and emanating a faint blue glow...",
+      "romance": "Fine rain began to fall outside the coffee shop's floor-to-ceiling windows. Su Qing looked up and saw a familiar figure entering. It was him, the boy who left without a word five years ago, now a mature figure in a suit...",
+      "detective": "The crime scene was cordoned off with yellow police tape. Detective Chen crouched down, carefully examining the footprints on the ground. This was the third case, and all clues pointed in the same direction—the unsolved case from twenty years ago...",
+      "scifi": "The space station's alarm suddenly blared. Wang Hao jolted awake from the cryo-pod. Through the porthole, he saw a massive ship approaching, never recorded in any star charts, its hull rippling with energy patterns beyond human civilization...",
+      "wuxia": "Sword energy sliced through the air. Lin Fan raised his sword to parry, but was forced back three steps. The black-clad figure's martial arts far exceeded his expectations. Just then, Lin Fan felt the jade pendant his master gave him before dying begin to heat up...",
+      "horror": "The clock struck midnight. Zhang Wei heard the sound of something heavy being dragged from upstairs. But she clearly remembered that the third floor had been vacant since that incident—there shouldn't be anyone there..."
+    }
+  },
+  "chatpage": {
+    "inputPlaceholder": "Paste your novel content or add continuation requirements...",
+    "generating": "AI is writing...",
+    "preparingRender": "Preparing to display continuation...",
+    "generationFailed": "Continuation failed"
+  },
+  "detailpage": {
+    "back": "Back",
+    "solution": "Version {{number}}",
+    "copyCode": "Copy Text",
+    "copied": "Copied",
+    "download": "Download",
+    "codeEditor": "Text Editor",
+    "preview": "Reading Preview",
+    "updateRealtime": "Text updates in real-time",
+    "copyFailed": "Copy failed"
+  },
+  "aiService": {
+    "promptPrefix": "Create a novel based on the following content. Describe scenes, characters, dialogue and psychology in detail. Use Markdown format with level-2 headings for chapters, bold for important content, italic for inner monologues.\n\n",
+    "streamNotAvailable": "ReadableStream not available",
+    "httpError": "HTTP {{status}} {{statusText}} {{text}}",
+    "generationFailed": "Continuation failed"
+  }
+}

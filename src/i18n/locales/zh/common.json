@@ -1,0 +1,37 @@
+{
+  "homepage": {
+    "title": "开始你的小说续写",
+    "inputPlaceholder": "粘贴你的小说内容，开始续写...",
+    "suggestions": {
+      "fantasy": "夜幕降临，李明独自走在回家的路上。突然，他发现路边有一扇从未见过的古老木门，门上雕刻着奇异的符文，散发着幽幽蓝光...",
+      "romance": "咖啡馆的落地窗外飘起了细雨，苏晴抬起头，看到一个熟悉的身影推门而入。是他，那个五年前不辞而别的少年，如今已是西装革履的成熟模样...",
+      "detective": "案发现场被黄色警戒线围起，陈探长蹲下身，仔细端详地上的脚印。这是第三起案件了，所有线索都指向同一个方向——二十年前那场未破的悬案...",
+      "scifi": "空间站的警报骤然响起，王浩猛地从冷冻舱中醒来。透过舷窗，他看到一艘从未在星际图谱上记录的巨型飞船正在接近，船体表面流转着不属于人类文明的能量纹路...",
+      "wuxia": "剑气破空而来，林凡横剑格挡，却被震退三步。眼前的黑衣人武功之高，远超他的预料。就在此时，林凡感到怀中那枚师父临终前交给他的玉佩开始发烫...",
+      "horror": "时钟指向午夜十二点，张薇听到楼上传来拖动重物的声音。可她明明记得，三楼自从发生那件事后，就一直空置着，不应该有人..."
+    }
+  },
+  "chatpage": {
+    "inputPlaceholder": "粘贴你的小说内容，或添加续写要求...",
+    "generating": "AI 正在创作中...",
+    "preparingRender": "准备展示续写内容...",
+    "generationFailed": "续写失败"
+  },
+  "detailpage": {
+    "back": "返回",
+    "solution": "版本 {{number}}",
+    "copyCode": "复制文本",
+    "copied": "已复制",
+    "download": "下载",
+    "codeEditor": "文本编辑器",
+    "preview": "阅读预览",
+    "updateRealtime": "编辑文本实时更新",
+    "copyFailed": "复制失败"
+  },
+  "aiService": {
+    "promptPrefix": "请基于以下内容创作小说，详细描写场景、人物、对话和心理活动。使用Markdown格式，章节用二级标题，重要内容用粗体，内心独白用斜体。",
+    "streamNotAvailable": "ReadableStream 不可用",
+    "httpError": "HTTP {{status}} {{statusText}} {{text}}",
+    "generationFailed": "续写失败"
+  }
+}
