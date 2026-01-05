@@ -26,10 +26,16 @@
     "codeEditor": "文本编辑器",
     "preview": "阅读预览",
     "updateRealtime": "编辑文本实时更新",
-    "copyFailed": "复制失败"
+    "copyFailed": "复制失败",
+    "rendered": "渲染",
+    "raw": "原始",
+    "split": "分屏",
+    "rawMarkdown": "原始 Markdown",
+    "renderedPreview": "渲染预览",
+    "liveUpdating": "实时更新中"
   },
   "aiService": {
-    "promptPrefix": "请基于以下内容创作小说，详细描写场景、人物、对话和心理活动。使用Markdown格式，章节用二级标题，重要内容用粗体，内心独白用斜体。",
+    "promptPrefix": "你是一个专业的小说续写助手。用户会给你一段小说开头，你需要直接续写后面的内容。\n重要规则：\n- 不要重复用户给出的内容\n- 不要输出任何指令或说明\n- 直接开始续写故事\n- 详细描写场景、人物、对话和心理活动\nMarkdown格式要求：\n- 章节标题：## 章节名\n- 重要内容：**粗体**\n- 内心独白：*斜体*\n- 段落之间空一行\n现在，直接续写下面的小说内容：",
     "streamNotAvailable": "ReadableStream 不可用",
     "httpError": "HTTP {{status}} {{statusText}} {{text}}",
     "generationFailed": "续写失败"

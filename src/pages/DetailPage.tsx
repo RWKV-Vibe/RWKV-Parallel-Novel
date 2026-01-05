@@ -174,7 +174,7 @@ export const DetailPage = () => {
               {isLiveUpdating && (
                 <span className="flex items-center gap-2 px-4 py-2 bg-blue-100 dark:bg-blue-900 rounded-full text-sm font-semibold text-blue-600 dark:text-blue-300 animate-pulse">
                   <span className="w-2 h-2 bg-blue-600 dark:bg-blue-300 rounded-full"></span>
-                  <span>{t('detailpage.liveUpdating') || '实时更新中'}</span>
+                  <span>{t('detailpage.liveUpdating')}</span>
                 </span>
               )}
             </div>
@@ -202,11 +202,64 @@ export const DetailPage = () => {
         </div>
       </div>
 
-      {/* 主内容区域：全屏阅读模式 */}
+      {/* 主内容区域：分屏视图 */}
       <div className="flex-1 overflow-auto bg-white dark:bg-[#1e1e1e]">
-        <div className="max-w-[1200px] mx-auto p-8 sm:p-12 md:p-16 lg:p-20 xl:p-24">
-          <div className="prose prose-lg md:prose-xl lg:prose-2xl dark:prose-invert max-w-none">
-            <MarkdownRenderer content={textContent} />
+        <div className="w-full h-full grid grid-cols-1 lg:grid-cols-2 gap-0">
+          {/* 左侧：原始Markdown */}
+          <div className="h-full overflow-auto bg-gradient-to-br from-gray-50 to-gray-100 dark:from-[#1a1a1a] dark:to-[#252525] border-r-2 border-gray-300 dark:border-gray-600">
+            <div className="p-8 md:p-10 lg:p-12">
+              <div className="sticky top-0 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-[#1a1a1a] dark:to-[#252525] pb-6 mb-8 border-b-4 border-blue-500 dark:border-blue-400 z-10 backdrop-blur-sm bg-opacity-95">
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
+                  {t('detailpage.rawMarkdown')}
+                </h3>
+              </div>
+              <pre className="font-mono text-base md:text-lg lg:text-xl xl:text-2xl leading-loose whitespace-pre-wrap break-words text-gray-700 dark:text-gray-300 selection:bg-blue-200 dark:selection:bg-blue-900">
+{textContent}
+              </pre>
+            </div>
+          </div>
+
+          {/* 右侧：渲染后的内容 */}
+          <div className="h-full overflow-auto bg-white dark:bg-[#1e1e1e]">
+            <div className="p-8 md:p-10 lg:p-12">
+              <div className="sticky top-0 bg-white dark:bg-[#1e1e1e] pb-6 mb-8 border-b-4 border-green-500 dark:border-green-400 z-10 backdrop-blur-sm bg-opacity-95">
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-teal-600 dark:from-green-400 dark:to-teal-400">
+                  {t('detailpage.renderedPreview')}
+                </h3>
+              </div>
+              <div className="
+                prose prose-lg md:prose-xl lg:prose-2xl 
+                dark:prose-invert max-w-none
+                prose-headings:font-bold 
+                prose-h1:text-4xl md:prose-h1:text-5xl lg:prose-h1:text-6xl 
+                prose-h1:mb-6 prose-h1:mt-8 
+                prose-h1:text-gray-900 dark:prose-h1:text-gray-100
+                prose-h1:border-b-4 prose-h1:border-blue-500 dark:prose-h1:border-blue-400 
+                prose-h1:pb-4
+                prose-h2:text-3xl md:prose-h2:text-4xl lg:prose-h2:text-5xl 
+                prose-h2:mb-4 prose-h2:mt-8
+                prose-h2:text-gray-800 dark:prose-h2:text-gray-200
+                prose-h2:border-l-8 prose-h2:border-green-500 dark:prose-h2:border-green-400
+                prose-h2:pl-6
+                prose-h3:text-2xl md:prose-h3:text-3xl lg:prose-h3:text-4xl
+                prose-h3:mb-3 prose-h3:mt-6
+                prose-h3:text-gray-700 dark:prose-h3:text-gray-300
+                prose-p:text-xl md:prose-p:text-2xl lg:prose-p:text-3xl
+                prose-p:leading-relaxed prose-p:mb-6
+                prose-p:text-gray-700 dark:prose-p:text-gray-300
+                prose-strong:text-blue-700 dark:prose-strong:text-blue-300
+                prose-strong:font-extrabold
+                prose-em:text-purple-700 dark:prose-em:text-purple-300
+                prose-em:italic prose-em:font-semibold
+                prose-em:bg-purple-50 dark:prose-em:bg-purple-900/20
+                prose-em:px-2 prose-em:py-1 prose-em:rounded
+                prose-hr:border-t-4 prose-hr:border-gray-300 dark:prose-hr:border-gray-600
+                prose-hr:my-10
+                selection:bg-green-200 dark:selection:bg-green-900
+              ">
+                <MarkdownRenderer content={textContent} />
+              </div>
+            </div>
           </div>
         </div>
       </div>

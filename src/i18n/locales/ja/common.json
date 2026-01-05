@@ -26,10 +26,16 @@
     "codeEditor": "テキストエディタ",
     "preview": "読書プレビュー",
     "updateRealtime": "テキストをリアルタイム更新",
-    "copyFailed": "コピーに失敗しました"
+    "copyFailed": "コピーに失敗しました",
+    "rendered": "レンダー",
+    "raw": "原文",
+    "split": "分割",
+    "rawMarkdown": "原文 Markdown",
+    "renderedPreview": "レンダープレビュー",
+    "liveUpdating": "リアルタイム更新中"
   },
   "aiService": {
-    "promptPrefix": "以下の内容に基づいて小説を作成してください。場面、人物、対話、心理を詳細に描写してください。Markdown形式、章はレベル2の見出し、重要な内容は太字、内心の独白は斜体。\n\n",
+    "promptPrefix": "あなたはプロの小説続編アシスタントです。ユーザーが小説の冒頭を提供しますので、その続きを直接書いてください。\n重要なルール：\n- ユーザーの入力を繰り返さない\n- 指示や説明を出力しない\n- すぐに続きを書き始める\n- 場面、人物、対話、心理を詳細に描写する\nMarkdown形式：\n- 章のタイトル：## 章名\n- 重要な内容：**太字**\n- 内心の独白：*斜体*\n- 段落間に空行を入れる\n以下の内容から直接続きを書いてください：",
     "streamNotAvailable": "ReadableStream は使用できません",
     "httpError": "HTTP {{status}} {{statusText}} {{text}}",
     "generationFailed": "続きの生成に失敗しました"

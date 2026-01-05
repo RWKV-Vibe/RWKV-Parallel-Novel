@@ -26,10 +26,16 @@
     "codeEditor": "Text Editor",
     "preview": "Reading Preview",
     "updateRealtime": "Text updates in real-time",
-    "copyFailed": "Copy failed"
+    "copyFailed": "Copy failed",
+    "rendered": "Rendered",
+    "raw": "Raw",
+    "split": "Split",
+    "rawMarkdown": "Raw Markdown",
+    "renderedPreview": "Rendered Preview",
+    "liveUpdating": "Live Updating"
   },
   "aiService": {
-    "promptPrefix": "Create a novel based on the following content. Describe scenes, characters, dialogue and psychology in detail. Use Markdown format with level-2 headings for chapters, bold for important content, italic for inner monologues.\n\n",
+    "promptPrefix": "You are a professional novel continuation assistant. The user will give you a novel opening, and you need to continue writing directly from where it left off.\nImportant Rules:\n- DO NOT repeat the user's input\n- DO NOT output any instructions or explanations\n- Start writing the continuation immediately\n- Describe scenes, characters, dialogue and psychology in detail\nMarkdown Format:\n- Chapter titles: ## Chapter Name\n- Important content: **bold**\n- Inner monologues: *italic*\n- Add blank line between paragraphs\nNow, continue writing directly from the following content:",
     "streamNotAvailable": "ReadableStream not available",
     "httpError": "HTTP {{status}} {{statusText}} {{text}}",
     "generationFailed": "Continuation failed"

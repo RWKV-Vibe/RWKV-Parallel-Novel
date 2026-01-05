@@ -27,7 +27,7 @@ export const ChatPage = () => {
     if (saved) {
       const parsed = JSON.parse(saved);
       // 如果保存的结果数量不等于当前的 totalCount，清空重新开始
-      if (parsed.length !== 8) {
+      if (parsed.length !== 24) {
         localStorage.removeItem('chatPageResults');
         return [];
       }
@@ -44,7 +44,7 @@ export const ChatPage = () => {
     () => initialMessage || localStorage.getItem('chatPagePrompt') || '',
     [initialMessage],
   );
-  const totalCount = 8;
+  const totalCount = 24;
 
   // Token 速率计算相关状态
   const [tokenRate, setTokenRate] = useState<number>(0);
@@ -976,7 +976,7 @@ export const ChatPage = () => {
               选择一个主题开始创作
             </h2>
             <p className="text-lg text-gray-500 dark:text-gray-400">
-              AI 将为你续写 8 个不同版本的小说内容
+              AI 将为你续写 24 个不同版本的小说内容
             </p>
             <div className="w-full grid grid-cols-2 gap-6">
               {suggestions.map((suggestion) => (
@@ -996,7 +996,7 @@ export const ChatPage = () => {
           </div>
         ) : (
           <div className="h-full w-full">
-            <div className="grid grid-cols-4 grid-rows-2 gap-6 h-full w-full">
+            <div className="grid grid-cols-6 grid-rows-4 gap-4 h-full w-full">
               {results.map((result, index) => (
                 <div
                   key={result.id}
@@ -1010,8 +1010,8 @@ export const ChatPage = () => {
                   {result.isLoading ? (
                     <div className="w-full h-full bg-white dark:bg-[#2d2d2d] flex items-center justify-center">
                       <div className="text-center">
-                        <Loader2 className="h-24 w-24 animate-spin text-blue-500 mx-auto mb-8" />
-                        <p className="text-5xl font-bold text-gray-500 dark:text-gray-400">
+                        <Loader2 className="h-12 w-12 animate-spin text-blue-500 mx-auto mb-4" />
+                        <p className="text-2xl font-bold text-gray-500 dark:text-gray-400">
                           {t('chatpage.generating') || '生成中...'}
                         </p>
                       </div>
@@ -1023,15 +1023,40 @@ export const ChatPage = () => {
                           markdownContainerRefs.current.set(index, el);
                         }
                       }}
-                      className="h-full bg-white dark:bg-[#1e1e1e] relative overflow-auto will-change-scroll prose prose-2xl max-w-none"
+                      className="h-full bg-white dark:bg-[#1e1e1e] relative overflow-auto will-change-scroll"
                       style={{
                         scrollBehavior: 'smooth',
                         isolation: 'isolate',
-                        fontSize: '2rem',
-                        lineHeight: '2.2',
                       }}
                     >
-                      <div className="p-12" style={{ fontSize: '2rem' }}>
+                      <div className="p-4 prose prose-sm dark:prose-invert max-w-none
+                        prose-headings:font-bold 
+                        prose-h1:text-lg 
+                        prose-h1:mb-2 prose-h1:mt-2
+                        prose-h1:text-gray-900 dark:prose-h1:text-gray-100
+                        prose-h1:border-b-2 prose-h1:border-blue-500 dark:prose-h1:border-blue-400 
+                        prose-h1:pb-1
+                        prose-h2:text-base 
+                        prose-h2:mb-2 prose-h2:mt-2
+                        prose-h2:text-gray-800 dark:prose-h2:text-gray-200
+                        prose-h2:border-l-4 prose-h2:border-green-500 dark:prose-h2:border-green-400
+                        prose-h2:pl-3
+                        prose-h3:text-sm
+                        prose-h3:mb-1 prose-h3:mt-2
+                        prose-h3:text-gray-700 dark:prose-h3:text-gray-300
+                        prose-p:text-sm
+                        prose-p:leading-relaxed prose-p:mb-3
+                        prose-p:text-gray-700 dark:prose-p:text-gray-300
+                        prose-strong:text-blue-700 dark:prose-strong:text-blue-300
+                        prose-strong:font-extrabold
+                        prose-em:text-purple-700 dark:prose-em:text-purple-300
+                        prose-em:italic prose-em:font-semibold
+                        prose-em:bg-purple-50 dark:prose-em:bg-purple-900/20
+                        prose-em:px-1 prose-em:rounded
+                        prose-hr:border-t-2 prose-hr:border-gray-300 dark:prose-hr:border-gray-600
+                        prose-hr:my-4
+                        selection:bg-blue-200 dark:selection:bg-blue-900
+                      ">
                         <MarkdownRenderer content={result.content} />
                       </div>
                     </div>
